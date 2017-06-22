@@ -18,18 +18,28 @@
     }
 
     // Regular
+    console.log('hello');
 
     // Interpolated
+    console.log('Hello I am a %s string!', 'poop');
 
     // Styled
+    console.log('%c I am some great text', 'font-size: 30px; background-color: red; text-shadow: 10px 10px 0 blue;')
 
     // warning!
+    console.warn('oh no!');
 
     // Error :|
+    console.error('shit!');
 
     // Info
+    console.info('Crocodiles eat 3-4 people per year');
 
     // Testing
+    console.assert(1===1, "wrong"); //will not have error
+    console.assert(1===2, "wrong"); //will show error with message
+    const p = document.querySelector('p');
+    console.assert(p.classList.contains('ouch'), 'That is wrong');
 
     // clearing
 
