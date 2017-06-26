@@ -9,5 +9,24 @@ const skipButtons = player.querySelector('[data-skip]');
 const ranges = player.querySelector('.player__slider');
 
 /* Build Out Functions */
+function togglePlay() {
+	/*if (video.paused) {
+		video.play();
+	} else {
+		video.pause();
+	}*/
+	const method = video.paused ? 'play' : 'pause';
+	video[method]();
+}
+
+function updateButton() {
+	const icon = this.paused ? '►' : '❚ ❚';
+	toggle.textContent = icon;
+}
 
 /* Hook Up The Event Listeners */
+video.addEventListener('click', togglePlay);
+video.addEventListener('play', updateButton);
+video.addEventListener('pause', updateButton);
+
+toggle.addEventListener('click', togglePlay);
